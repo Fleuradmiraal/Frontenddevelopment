@@ -1,0 +1,555 @@
+/* CSS Document */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Harmonia Sans", sans-serif;
+  src: url('../fonts/HarmoniaSansProCyr-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Avenir Next", sans-serif;
+  src: url('../fonts/AvenirNextLTPro-regular.otf');
+  font-size: 14px;
+}
+
+*,
+html {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+
+:root {
+  --background-dark: #19233e;
+  --colorfont-header: white;
+  --colorfont-blue: #19233e;
+  --colorbutton: #088901;
+  --tekst-light: white;
+  --tekst-dark: black;
+  --primary-font: "Harmonia Sans", sans-serif;
+  --secundary-font: "Avenir Next", sans-serif;
+}
+
+h1 {
+  font-family: var(--primary-font);
+  color: var(--colorfont-blue);
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  font-family: var(--primary-font);
+  font-size: 30px;
+  text-align: center;
+  color: var(--colorfont-blue);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+h3 {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  text-align: center;
+}
+
+p {
+  font-family: var(--secundary-font);
+  font-size: 14px;
+  font-weight: lighter;
+  color: var(--colorfont-blue);
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--secundary-font);
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+ul li {
+  list-style: none;
+}
+
+.background {
+  background-color: #fafafa;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+hr {
+  border: 2px solid var(--colorfont-blue);
+  margin: 10px 0px;
+  width: 1.5em;
+
+}
+
+/* Header ---------------------------------------------------- */
+header {
+  background-color: var(--background-dark);
+  text-align: center;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header p {
+  text-align: center;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: var(--colorfont-header);
+}
+
+header ul {
+  display: flex;
+}
+
+header>ul li {
+  width: 1em;
+  margin: .5em;
+}
+
+/* nav ---------------------------------------------------- */
+nav {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+header nav img {
+  width: 100px;
+  margin: 10px auto;
+}
+
+header nav img.shoppingcart {
+  width: 2em;
+}
+
+
+/* hamburger ---------------------------------------------------- */
+nav ul {
+  margin-top: 50px;
+}
+
+nav ul li {
+  text-align: left;
+  padding: 20px;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+.menuItem {
+  text-decoration: none;
+  color: var(--tekst-light);
+}
+
+
+.menuItem:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 11em;
+  left: 2em;
+  padding: 4px;
+  border: black solid 1px;
+  background: white;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  display: block;
+  transform: translatex(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: var(--background-dark);
+  color: white;
+  list-style: none;
+  padding-top: 10em;
+}
+
+.showMenu {
+  transform: translatex(0);
+}
+
+/* Shop ---------------------------------------------------- */
+
+.shop {
+  padding-top: 230px;
+}
+
+main .shop a {
+  color: var(--tekst-light);
+  background-color: var(--colorbutton);
+  display: block;
+  text-align: center;
+  width: 150px;
+  padding: 1em 1em;
+  margin: 30px auto 50px auto;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+
+/* Producten ---------------------------------------------------- */
+.producten h3 {
+  padding: 100px 10px 10px 10px;
+}
+
+.producten ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  padding: 1.2em;
+  word-wrap: break-word;
+  padding-top: 60px;
+}
+
+.producten p {
+  padding: 20px;
+}
+
+/* ons verhaal ---------------------------------------------------- */
+
+.onsverhaal {
+  margin: 30px;
+  margin-top: 20px;
+}
+
+.onsverhaal p {
+  text-align: left;
+}
+
+.onsverhaal h2 {
+  text-align: left;
+  margin-top: .2em;
+}
+
+.onsverhaal a {
+  color: var(--tekst-light);
+  background-color: var(--colorbutton);
+  display: block;
+  text-align: center;
+  width: 220px;
+  padding: 1em 1em;
+  margin: 30px 0px 50px 0px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* Kleding ---------------------------------------------------- */
+
+.kleding {
+  display: grid;
+  grid-template-columns: 50%;
+}
+
+.kleding a {
+  padding: 1.5em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+
+/* Stelz bij jou in de buurt? ---------------------------------------------------- */
+
+.indebuurt {
+  background-color: var(--background-dark);
+  padding: 1em 1em;
+  margin-bottom: 3em;
+}
+
+.indebuurt h2 {
+  color: var(--tekst-light);
+  padding-top: 2em;
+
+}
+
+.indebuurt p {
+  color: var(--tekst-light);
+  text-align: center;
+  padding-top: 1em;
+}
+
+.indebuurt a {
+  color: var(--tekst-light);
+  background-color: var(--colorbutton);
+  display: block;
+  text-align: center;
+  width: 220px;
+  padding: 1em 1em;
+  margin: 30px auto 50px auto;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* Socialmedia---------------------------------------------------- */
+.socialmediafotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: .5em;
+  margin: 0px 2em 4em 2em;
+  padding-top: 2em;
+}
+
+/* Slideshow---------------------------------------------------- */
+.slideshow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  animation-name: slideshow;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+
+}
+
+.slideshow h3 {
+  min-width: calc(100vw);
+  background: lightgrey;
+  color: black;
+  padding: 1em;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(-100%);
+  }
+
+  66% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+.breedte {
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Overons---------------------------------------------------- */
+.overons {
+  margin-top: 200px;
+}
+
+/* Verfrissend---------------------------------------------------- */
+.bewust {
+  text-align: left;
+  width: 18em;
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  font-weight: bold;
+}
+
+.bewust h2 {
+  letter-spacing: .1em;
+  text-align: left;
+}
+
+/* Puur ---------------------------------------------------- */
+.puur {
+  text-align: left;
+  width: 18em;
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  font-weight: bold;
+}
+
+.puur h2 {
+  letter-spacing: .1em;
+  text-align: left;
+}
+
+.puur p {
+  margin-bottom: 50px;
+}
+
+.puur img {
+  padding: 0;
+}
+
+.puur a {
+  background-color: var(--background-dark);
+  color: var(--tekst-light);
+  display: block;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Kom bij ons werken------------------------------------------------------- */
+.werken {
+  text-align: left;
+  width: 18em;
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+
+.werken h2 {
+  letter-spacing: .1em;
+  text-align: left;
+}
+
+.werken p {
+  margin-bottom: 50px;
+}
+
+.werken img {
+  padding: 0;
+}
+
+.werken a {
+  background-color: var(--background-dark);
+  color: var(--tekst-light);
+  display: block;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* iframe------------------------------------------------------- */
+iframe {
+  padding: 10px;
+  border: none;
+}
+
+/* Collapsible------------------------------------------------------- */
+.collapsible {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+button.collapsible {
+  text-transform: uppercase;
+  font-family: var(--secundary-font);
+  font-size: 14px;
+  padding: 15px;
+  color: black;
+  background-color: rgb(240, 240, 240);
+}
+
+
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* footer------------------------------------------------------- */
+footer {
+  background-color: var(--background-dark);
+  padding: 1em;
+}
+
+footer h3 {
+  color: var(--tekst-light);
+  text-align: left;
+  padding-top: 1em;
+  padding-top: 40px;
+}
+
+footer p {
+  color: var(--tekst-light);
+  text-align: left;
+  padding: .8em .0em;
+}
+
+footer .minderjarig {
+  font-style: italic;
+}
+
+footer a {
+  color: var(--tekst-light);
+  text-align: left;
+}
+
+footer .firstWord {
+  font-weight: bold;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  width: 20px;
+  margin: 10px;
+}
+
+footer input {
+  width: 70%;
+  padding: 15px;
+  margin: 20px 30px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid white;
+  color: var(--tekst-light);
+}
+
+footer form img {
+  width: 20px;
+  height: 20px;
+  margin-top: 35px;
+}
+
+footer button {
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
